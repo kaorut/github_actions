@@ -1,0 +1,7 @@
+name: dpkg
+on: push
+jobs:
+  dpkg:
+    runs-on: ubuntu-latest
+    steps:
+    - run: dpkg -l
