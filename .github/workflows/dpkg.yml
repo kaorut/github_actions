@@ -4,4 +4,14 @@ jobs:
   dpkg:
     runs-on: ubuntu-latest
     steps:
-    - run: dpkg -l
+    - run: |
+      sudo apt-get -y update
+      sudo apt-get -y install \
+        autoconf-archive \
+        bison \
+        cmake \
+        dos2unix \
+        flex \
+        graphviz \
+        iwyu
+      dpkg -l
