@@ -7,6 +7,8 @@ jobs:
     - name: test
       shell: bash
       run: |
-        apt-get -y update
-        apt-get -y install iwyu
+        sudo apt-get -y update
+        sudo apt-get -y install iwyu
         iwyu -print-resouce-dir 2>/dev/null
+        ls -l `iwyu -print-resouce-dir 2>/dev/null`\include
+        
