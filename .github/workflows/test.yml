@@ -9,6 +9,6 @@ jobs:
       run: |
         sudo apt-get -y update
         sudo apt-get -y install iwyu
-        iwyu -print-resouce-dir 2>/dev/null || true
-        ls -l `iwyu -print-resouce-dir 2>/dev/null`\include
+        iwyu -print-resource-dir 2>/dev/null || true
+        ls -l `iwyu -print-resource-dir 2>/dev/null || true`\include
         
