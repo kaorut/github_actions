@@ -1,0 +1,10 @@
+name: dpkg
+on: push
+jobs:
+  dpkg:
+    runs-on: ubuntu-latest
+    steps:
+    - name: test
+      shell: bash
+      run: |
+        locate stddef.h
