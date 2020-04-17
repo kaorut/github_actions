@@ -7,6 +7,6 @@ jobs:
     - name: test
       shell: bash
       run: |
-        locate stddef.h
-        dpkg -l | grep linux
- 
+        apt-get -y update
+        apt-get -y install iwyu
+        iwyu -print-resouce-dir 2>/dev/null
