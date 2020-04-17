@@ -8,5 +8,5 @@ jobs:
       shell: bash
       run: |
         locate stddef.h
-        uname -r
+        dpkg -l | grep linux
  
