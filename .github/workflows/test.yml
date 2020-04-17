@@ -8,6 +8,8 @@ jobs:
       shell: bash
       run: |
         sudo apt-cache search ^iwyu
+        sudo apt-cache search ^clang
+        sudo dpkg -l | grep clang
         sudo apt-get -y update
         sudo apt-get -y install iwyu
         iwyu -print-resource-dir 2>/dev/null || true
