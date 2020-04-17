@@ -11,7 +11,7 @@ jobs:
         sudo apt-cache search ^clang
         sudo dpkg -l | grep clang
         sudo apt-get -y update
-        sudo apt-get -y install iwyu
+        sudo apt-get -y install iwyu clang-5.0
         iwyu -print-resource-dir 2>/dev/null || true
         ls -l `iwyu -print-resource-dir 2>/dev/null || true`/include
         
