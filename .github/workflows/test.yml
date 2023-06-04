@@ -10,3 +10,4 @@ jobs:
         dotnet tool install --global wix --version 4.0.0
         where wix
         wix --version
+        wix extension add --global WixToolset.UI.wixext
