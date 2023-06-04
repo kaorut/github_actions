@@ -1,17 +1,12 @@
-name: dpkg
+name: WiX 4.0.0
 on: push
 jobs:
-  dpkg:
-    runs-on: ubuntu-latest
+  wix_install:
+    runs-on: windows-2022
     steps:
-    - name: test
-      shell: bash
+    - name: wix_install
+      shell: cmd
       run: |
-        sudo apt-cache search ^iwyu
-        sudo apt-cache search ^clang
-        sudo dpkg -l | grep clang
-        sudo apt-get -y update
-        sudo apt-get -y install iwyu clang-5.0
-        iwyu -print-resource-dir 2>/dev/null || true
-        ls -l `iwyu -print-resource-dir 2>/dev/null || true`/include
-        
+        dotnet tool install --global wix --version 4.0.0
+        where wix
+        wix --version
